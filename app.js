@@ -16,6 +16,7 @@ let winnerPattern = [
 
 for (let box of boxes) {
   box.addEventListener("click", () => {
+    console.log('btn clicked')
     if (box.textContent === "") {
       if (player1) {
         console.log("x print");
@@ -32,6 +33,7 @@ for (let box of boxes) {
       console.log("Box is already occupied");
     }
     checkWinner();
+    // resetGame();
   });
 }
 
@@ -71,12 +73,12 @@ function resetGame() {
     box.textContent = "";
     box.style.backgroundColor = "#595758";
     winner.textContent = "New Game";
-  }
-  player1 = true;
-}
-function disableBoxes() {
-  for (let box of boxes) {
-    box.onclick = null; // Disable the click event for each box
-    box.style.pointerEvents = "none"; // Prevent further mouse interactions
+    player1 = true;
   }
 }
+// function disableBoxes() {
+//   for (let box of boxes) {
+//     box.onclick = null; // Disable the click event for each box
+//     box.style.pointerEvents = "none"; // Prevent further mouse interactions
+//   }
+// }

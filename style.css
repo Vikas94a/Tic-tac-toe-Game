@@ -40,9 +40,11 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
-  max-width: 55vw;
-  max-height: 55vh;
+  min-width: 400px;
+  min-height: 400px;
   align-items: center;
+  border: 3px solid black;
+  padding: 20px;
 }
 
 .box {
@@ -64,9 +66,10 @@ body {
 }
 
 #btn {
-  color: #391463;
-  background-color: #247ba0;
-  height: 40px;
-  width: 60px;
-  border: 2px solid #e2e2e2;
+  color: #ffffff;
+  background-color: #034aff;
+  height: 50px;
+  width: 90px;
+  border: 2px double #e2e2e2;
+  margin-top: 45px;
 }
